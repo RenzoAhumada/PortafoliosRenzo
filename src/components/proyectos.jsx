@@ -3,8 +3,12 @@ import fotoPaginaMendoza from './images/paginaResponsivaDeMendoza.JPG';
 import fotoFlyChomby from './images/flyChombiHomr.JPG';
 import fotoTienda from './images/tiendaCapturaUno.JPG';
 import foto from './images/fotoNavBardos.jpg';
+import { useState } from 'react';
+import ChatBot from './chatbot';
+
 
 const Proyectos = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <section className="text-gray-400 bg-blue-950 body-font">
@@ -28,8 +32,45 @@ const Proyectos = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div>   
         </div>
+       
+       {!isOpen && (
+      <button
+        className="fixed bottom-0 left-0 m-4 bg-blue-500 p-3 rounded-full text-white shadow-lg hover:bg-blue-600 focus:outline-none"
+        onClick={() => setIsOpen(true)}>
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h6m-9 8l3-3h8a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v8a2 2 0 002 2h8l3 3z" />
+        </svg>
+      </button>
+       )}
+       {isOpen && (
+         <div className="fixed bottom-0 left-0 m-4 w-72">
+         <div className="bg-gray-800 text-white rounded-t-lg px-4 py-2 flex justify-between items-center">
+           <h3 className="text-lg">ChatBot</h3>
+           <button
+             className="text-gray-400 hover:text-white focus:outline-none"
+             onClick={() => setIsOpen(false)}
+           >
+             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+             </svg>
+           </button>
+         </div>
+         <div className="bg-white h-64 rounded-b-lg p-4 flex flex-col">
+           <div className="flex-1 overflow-y-auto">
+            <ChatBot /> 
+           </div>
+           {/*<div className="mt-4">
+             <input
+               type="text"
+               placeholder="Escribe un mensaje..."
+               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+             />
+           </div>*/}
+         </div>
+       </div>
+     )}
       </section>
 
       <section className="text-gray-600 body-font bg-blue-950">
