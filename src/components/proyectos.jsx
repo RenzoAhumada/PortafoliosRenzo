@@ -1,14 +1,17 @@
-import fotoCruzEHijos from './images/cruzEHijos.JPG';
 import fotoPaginaMendoza from './images/paginaResponsivaDeMendoza.JPG';
 import fotoFlyChomby from './images/flyChombiHomr.JPG';
 import fotoTienda from './images/tiendaCapturaUno.JPG';
 import foto from './images/fotoNavBardos.jpg';
 import { useState } from 'react';
 import ChatBot from './chatbot';
+import Carousel from './carousel';
+
 
 
 const Proyectos = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+
   return (
     <>
       <section className="text-gray-400 bg-blue-950 body-font">
@@ -16,7 +19,7 @@ const Proyectos = () => {
           <div className="lg:w-4/6 mx-auto">
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div className="w-25 h-25 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+                <div className="w-21 h-21 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
                   <img src={foto} alt="Foto de Renzo" className="w-27 h-27 rounded-full object-cover border-2" />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
@@ -37,7 +40,7 @@ const Proyectos = () => {
        
        {!isOpen && (
       <button
-        className="fixed bottom-0 left-0 m-4 bg-blue-500 p-3 rounded-full text-white shadow-lg hover:bg-blue-600 focus:outline-none"
+        className="fixed bottom-0 left-0 m-4 bg-blue-500 p-3 rounded-full text-white shadow-lg hover:bg-blue-600 focus:outline-none transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
         onClick={() => setIsOpen(true)}>
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h6m-9 8l3-3h8a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v8a2 2 0 002 2h8l3 3z" />
@@ -52,7 +55,7 @@ const Proyectos = () => {
              className="text-gray-400 hover:text-white focus:outline-none"
              onClick={() => setIsOpen(false)}
            >
-             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"  >
                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
              </svg>
            </button>
@@ -61,17 +64,11 @@ const Proyectos = () => {
            <div className="flex-1 overflow-y-auto">
             <ChatBot /> 
            </div>
-           {/*<div className="mt-4">
-             <input
-               type="text"
-               placeholder="Escribe un mensaje..."
-               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-             />
-           </div>*/}
          </div>
        </div>
      )}
       </section>
+
 
       <section className="text-gray-600 body-font bg-blue-950">
         <div className="container px-5 py-24 mx-auto">
@@ -83,9 +80,9 @@ const Proyectos = () => {
           </div>
           <div className="flex flex-wrap -mx-4 -mb-10 text-center">
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img alt="content" className="object-cover object-center h-full w-full" src={fotoCruzEHijos} />
-              </div>
+              <Carousel>
+                
+              </Carousel>
               <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">Página para asesor de seguros</h2>
               <p className="leading-relaxed text-white">
                 Desarrollé una página web para un asesor de seguros, utilizando HTML, CSS, JavaScript y PHP para la creación del formulario. Este proyecto me permitió aplicar mis conocimientos en desarrollo web, creando una interfaz funcional y amigable para los usuarios.
