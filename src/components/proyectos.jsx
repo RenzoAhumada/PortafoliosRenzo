@@ -5,11 +5,34 @@ import foto from './images/fotoNavBardos.jpg';
 import { useState } from 'react';
 import ChatBot from './chatbot';
 import Carousel from './carousel';
-
-
+import fotoCruzEHijos from './images/cruzEHijos.JPG';
+import fotoCruzEHijosMobile from './images/cruzEHijosdos.JPG';
+import fotoPaginaMendozaDos from './images/paginaResponsivaDeMendozaDos.JPG'
+import fotoTiendaProductos from './images/TiendaProductosAgregados.JPG'
+import fotoProductosAgregados from './images/tiendaPago.JPG'
 
 const Proyectos = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const imagesCruzEHijos = [
+    fotoCruzEHijos,
+    fotoCruzEHijosMobile
+  ]
+  const imagespaginaMendoza = [
+    fotoPaginaMendoza,
+    fotoPaginaMendozaDos
+  ]
+
+  const imagesFlyChomby = [
+    fotoFlyChomby
+  ]
+
+  const imagesTiendaReact = [
+    fotoTienda,
+    fotoTiendaProductos,
+    fotoProductosAgregados
+
+  ]
   
 
   return (
@@ -80,7 +103,7 @@ const Proyectos = () => {
           </div>
           <div className="flex flex-wrap -mx-4 -mb-10 text-center">
             <div className="sm:w-1/2 mb-10 px-4">
-              <Carousel>
+              <Carousel images={imagesCruzEHijos}>
                 
               </Carousel>
               <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">Página para asesor de seguros</h2>
@@ -92,9 +115,9 @@ const Proyectos = () => {
               </button>
             </div>
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img alt="content" className="object-cover object-center h-full w-full" src={fotoPaginaMendoza} />
-              </div>
+                <Carousel images={imagespaginaMendoza}>
+                
+                </Carousel>
               <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">Página de ubicaciones de Mendoza</h2>
               <p className="leading-relaxed text-white">
                 Desarrollé un proyecto para mostrar los lugares más concurridos de Mendoza, utilizando HTML, CSS y JavaScript. Este proyecto destaca por su diseño interactivo y su capacidad para proporcionar información útil a los visitantes sobre los principales puntos de interés de la región.
@@ -104,26 +127,38 @@ const Proyectos = () => {
               </button>
             </div>
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img alt="content" className="object-cover object-center h-full w-full" src={fotoFlyChomby} />
-              </div>
+              <Carousel images={imagesFlyChomby}/>
               <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">Proyecto universitario</h2>
               <p className="leading-relaxed text-white">
                 En este proyecto universitario desarrollado con React, trabajé en equipo con 7 integrantes. Mi responsabilidad principal fue el desarrollo de la parte de equipaje y el inicio de sesión de usuario. Esta experiencia me permitió colaborar eficazmente en un entorno de equipo y aplicar mis habilidades en React para crear funcionalidades clave del sistema.
               </p>
             </div>
             <div className="sm:w-1/2 mb-10 px-4">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img alt="content" className="object-cover object-center h-full w-full" src={fotoTienda} />
-              </div>
+              <Carousel images={imagesTiendaReact}/>
               <h2 className="title-font text-2xl font-medium text-white mt-6 mb-3">Proyecto de tienda</h2>
               <p className="leading-relaxed text-white">
                 Este es un proyecto personal que estoy desarrollando utilizando React + Vite. Actualmente, el proyecto se encuentra en una etapa de desarrollo y está siendo trabajado exclusivamente por mí. Este proyecto me permite profundizar en mis habilidades en React y Vite, y aplicar mis conocimientos para construir una aplicación funcional y atractiva de manera independiente.
               </p>
             </div>
           </div>
+          
         </div>
+
+        <div className="flex justify-center pb-8">
+          <button className="inline-flex items-center bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:text-white">
+            <a className="mr-2 hover:text-white" href="https://github.com/RenzoAhumada?tab=repositories'">
+              ¡Te invito a ver mis otros proyectos en github clickeando aquí!
+            </a> 
+            <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M12 .297c-6.6 0-12 5.4-12 12.025 0 5.325 3.438 9.846 8.205 11.44.6.113.82-.263.82-.588 0-.293-.01-1.07-.015-2.1-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.335-1.758-1.335-1.758-1.091-.745.083-.729.083-.729 1.205.083 1.838 1.237 1.838 1.237 1.07 1.834 2.808 1.305 3.492.998.108-.774.42-1.305.763-1.604-2.665-.305-5.467-1.334-5.467-5.93 0-1.31.467-2.382 1.237-3.222-.124-.304-.537-1.527.117-3.18 0 0 1.01-.324 3.3 1.23a11.49 11.49 0 013.005-.403 11.53 11.53 0 013.005.403c2.287-1.555 3.297-1.23 3.297-1.23.656 1.653.243 2.875.12 3.18.773.84 1.236 1.912 1.236 3.222 0 4.61-2.807 5.623-5.48 5.92.43.37.814 1.096.814 2.207 0 1.59-.015 2.872-.015 3.262 0 .325.22.707.824.587C20.565 22.165 24 17.642 24 12.322 24 5.696 18.6.297 12 .297z"></path>
+            </svg>
+          </button>
+        </div>
+
+
       </section>
+
+      
     </>
   );
 }

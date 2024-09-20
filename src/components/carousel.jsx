@@ -1,13 +1,6 @@
 import { useState } from "react";
-import fotoCruzEHijos from './images/cruzEHijos.JPG';
-import fotoCruzEHijosMobile from './images/cruzEHijosMobile.JPG'
 
-const Carousel = () => {
-  const images = [
-    fotoCruzEHijos,
-    fotoCruzEHijosMobile,
-  ];
-
+const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -31,13 +24,13 @@ const Carousel = () => {
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
         onClick={prevImage}
       >
-        Prev
+        Anterior
       </button>
       <button
         className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
         onClick={nextImage}
       >
-        Next
+        Siguiente
       </button>
     </div>
   );
