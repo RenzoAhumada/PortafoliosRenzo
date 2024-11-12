@@ -1,34 +1,50 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const variants = {
+  hidden: (direction) => ({ opacity: 0, x: direction === 1 ? 300 : -300 }),
+  visible: { opacity: 1, x: 0 },
+  exit: (direction) => ({ opacity: 0, x: direction === 1 ? -300 : 300 }),
+};
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [direction, setDirection] = useState(1);
 
-  const nextImage = () => {
-    setCurrentImage((currentImage + 1) % images.length);
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrentImage((prev) => (prev + 1) % images.length);
   };
 
-  const prevImage = () => {
-    setCurrentImage((currentImage - 1 + images.length) % images.length);
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
-    <div className="relative w-full max-w-lg mx-auto">
-      <div className="relative h-64 overflow-hidden rounded-lg">
-        <img
-          alt="Carousel content"
-          className="object-cover object-center w-full h-full"
+    <div className="relative w-full h-64 overflow-hidden rounded-lg">
+      <AnimatePresence custom={direction}>
+        <motion.img
+          key={images[currentImage]}
           src={images[currentImage]}
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          custom={direction}
+          transition={{ duration: 0.5 }}
+          className="absolute w-full h-full object-cover"
         />
-      </div>
+      </AnimatePresence>
       <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
-        onClick={prevImage}
+        onClick={prevSlide}
       >
         Anterior
       </button>
       <button
         className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
-        onClick={nextImage}
+        onClick={nextSlide}
       >
         Siguiente
       </button>
@@ -37,4 +53,5 @@ const Carousel = ({ images }) => {
 };
 
 export default Carousel;
+
 
