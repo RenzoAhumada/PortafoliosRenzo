@@ -3,7 +3,12 @@ import { motion } from "framer-motion"
 export const EstududiosHabilidades = () => {
   return (
     <>
-    
+     <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 2}}
+                  viewport={{ once: true }}
+                >
       <section className="text-gray-400 bg-white-900 body-font">
         
         <div className="container px-5 py-24 mx-auto">
@@ -74,6 +79,7 @@ export const EstududiosHabilidades = () => {
           </div>
         </div>
       </section>
+      </motion.div>
     </>
   )
 }
