@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import fotoCruzEHijos from './images/cruzEHijos.JPG';
 import fotoCruzEHijosMobile from './images/cruzEHijosdos.JPG';
 import fotoPaginaMendoza from './images/paginaResponsivaDeMendoza.JPG';
@@ -73,7 +73,7 @@ const ProyectosRealizados = () => {
                     En este proyecto universitario desarrollado con React, trabajé en equipo con 7 integrantes. Mi responsabilidad principal fue el desarrollo de la parte de equipaje y el inicio de sesión de usuario. Esta experiencia me permitió colaborar eficazmente en un entorno de equipo y aplicar mis habilidades en React para crear funcionalidades clave del sistema.
                     </p>
                     <button className="inline-flex items-center bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:text-white">
-                        <a className="mr-5 hover:text-white" href='https://renzoahumada.github.io/responsivePageMDZ/'>Para visitar la página haz clic aquí</a>
+                        <a className="mr-5 hover:text-white" href='https://github.com/samyfontes/flychombi'>Para visitar la página haz clic aquí</a>
                     </button>
                     </div>
 
@@ -86,7 +86,7 @@ const ProyectosRealizados = () => {
                         Este es un proyecto personal que estoy desarrollando utilizando React + Vite. Actualmente, el proyecto se encuentra en una etapa de desarrollo y está siendo trabajado exclusivamente por mí. Este proyecto me permite profundizar en mis habilidades en React y Vite, y aplicar mis conocimientos para construir una aplicación funcional y atractiva de manera independiente.
                     </p>
                     <button className="inline-flex items-center bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:text-white">
-                        <a className="mr-5 hover:text-white" href='https://renzoahumada.github.io/responsivePageMDZ/'>Para visitar la página haz clic aquí</a>
+                        <a className="mr-5 hover:text-white" href='https://github.com/RenzoAhumada/tiendaConReact'>Para visitar la página haz clic aquí</a>
                     </button>
                     </div>
                 </div>

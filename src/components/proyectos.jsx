@@ -1,24 +1,12 @@
-import fotoPaginaMendoza from './images/paginaResponsivaDeMendoza.JPG';
-import fotoFlyChomby from './images/flyChombiHomr.JPG';
-import fotoTienda from './images/tiendaCapturaUno.JPG';
 import foto from './images/fotoNavBardos.jpg';
 import { useState } from 'react';
 import ChatBot from './chatbot';
-import Carousel from './carousel';
-import fotoCruzEHijos from './images/cruzEHijos.JPG';
-import fotoCruzEHijosMobile from './images/cruzEHijosdos.JPG';
-import fotoPaginaMendozaDos from './images/paginaResponsivaDeMendozaDos.JPG'
-import fotoTiendaProductos from './images/TiendaProductosAgregados.JPG'
-import fotoProductosAgregados from './images/tiendaPago.JPG'
-
 import { motion } from "framer-motion"
 
 
 
 const Proyectos = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  
 
   return (
     <>
