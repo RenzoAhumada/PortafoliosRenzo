@@ -8,10 +8,11 @@ export const EstududiosHabilidades = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 2}}
                   viewport={{ once: true }}
+                  className="min-h-[500px]" 
                 >
       <section className="text-gray-400 bg-white-900 body-font">
         
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 mx-auto">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
               Estudios y habilidades

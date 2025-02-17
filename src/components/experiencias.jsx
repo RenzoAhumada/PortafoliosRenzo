@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"
 
-const CarouselExperiencias = () => {
+const Experiencias = () => {
   const experiencias = [
     {
       fechaMes: "Julio 2024",
@@ -60,6 +61,14 @@ const CarouselExperiencias = () => {
   };
 
   return (
+    <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 2}}
+    viewport={{ once: true }}
+    className="min-h-[500px]" 
+
+  >
     <section>
       <div
         className="relative w-full overflow-hidden"
@@ -120,14 +129,15 @@ const CarouselExperiencias = () => {
         <button className="inline-flex items-center bg-blue-950 border-0 py-1 px-3 text-white focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:text-white">
           <a
             className="mr-5 hover:text-white"
-            href="https://drive.google.com/file/d/143dIO8vG_u0Q6LvQnt_1cZ6HXJ-M5Y3Y/view?usp=sharing"
+            href="https://drive.google.com/file/d/1y7k5_KoCzqET_VtNh1w5lX6dEl3Eplw4/view?usp=sharing"
           >
             Para ver mi curriculum completo click aqui
           </a>
         </button>
       </div>
     </section>
+  </motion.div>
   );
 };
 
-export default CarouselExperiencias;
+export default Experiencias;

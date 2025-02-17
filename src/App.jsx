@@ -4,6 +4,7 @@ import EstudiosHabilidades from "./components/estududiosHabilidades";
 import ProyectosRealizados from "./components/proyectosRealizados";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Experiencias from "./components/experiencias";
+import Button from "./components/button";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -12,16 +13,7 @@ function App() {
       <Router basename="/PortafoliosRenzo">
         <Proyectos />
         <ProyectosRealizados />
-
-        <Routes>
-          <Route path="/" element={<EstudiosHabilidades />} />
-          <Route
-            path="/estudiosYHabilidades"
-            element={<EstudiosHabilidades />}
-          />
-          <Route path="/experiencias" element={<Experiencias />} />
-        </Routes>
-
+        <Button></Button>
         <Footer />
       </Router>
     </>
