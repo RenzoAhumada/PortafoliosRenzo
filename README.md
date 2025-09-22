@@ -1,8 +1,26 @@
-# React + Vite
+#Portfolio trabajado con React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Este proyecto es un portfolio personal desarrollado con React y Vite, alojado en un entorno npm y desplegado en GitHub Pages.
 
-Currently, two official plugins are available:
+###Funcionamiento básico
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dependencias: gh-pages@4.0.0
+
+Requiere Node.js instalado
+
+###Pasos para correr el proyecto
+
+Clonar o descargar el repositorio.
+
+Abrir la terminal en la carpeta raíz del proyecto.
+
+Instalar las dependencias:
+npm install
+Compilar el proyecto:
+npm run build
+Desplegar en GitHub Pages:
+npm run deploy
+
+Verificación
+
+Una vez completados los pasos, verificar que el proyecto esté correctamente desplegado en la URL de GitHub Pages.
