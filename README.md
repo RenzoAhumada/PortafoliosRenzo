@@ -1,14 +1,14 @@
-#Portfolio trabajado con React + Vite
+# * Portfolio trabajado con React + Vite *
 
-##Este proyecto es un portfolio personal desarrollado con React y Vite, alojado en un entorno npm y desplegado en GitHub Pages.
+## Este proyecto es un portfolio personal desarrollado con React y Vite, alojado en un entorno npm y desplegado en GitHub Pages.
 
-###Funcionamiento básico
+### Funcionamiento básico
 
 Dependencias: gh-pages@4.0.0
 
 Requiere Node.js instalado
 
-###Pasos para correr el proyecto
+### Pasos para correr el proyecto
 
 Clonar o descargar el repositorio.
 
